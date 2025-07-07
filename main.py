@@ -20,7 +20,6 @@ def main():
         print("❌ Invalid choice. Please enter 1 or 2.")
         return
 
-    # ✅ Take goal and timeframe from terminal input
     user_goal = input("\nEnter your high-level goal: ").strip()
     if not user_goal:
         print("❌ Goal cannot be empty.")

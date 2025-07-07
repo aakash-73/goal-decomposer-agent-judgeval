@@ -1,20 +1,20 @@
-# 🧠 Goal Decomposer Agent
+# Goal Decomposer Agent
 
 A terminal-based AI agent that breaks down high-level goals into actionable steps using **Groq** or **OpenAI**, and then **evaluates** the generated plan using **Judgeval**'s `FaithfulnessScorer`.
 
 ---
 
-## 📦 Features
+##  Features
 
-- ✅ Goal decomposition using **Groq (LLaMA 3.3 70B)** or **OpenAI GPT-4.1**
-- ✅ Terminal prompt + automatic JSON step formatting
-- ✅ Evaluates output with `FaithfulnessScorer`
-- ✅ Traced and logged with **Judgeval**
-- ✅ Modular and easy to extend with other models
+-  Goal decomposition using **Groq (LLaMA 3.3 70B)** or **OpenAI GPT-4.1**
+-  Terminal prompt + automatic JSON step formatting
+-  Evaluates output with `FaithfulnessScorer`
+-  Traced and logged with **Judgeval**
+-  Modular and easy to extend with other models
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 goal-decomposer-agent/
@@ -28,16 +28,16 @@ goal-decomposer-agent/
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
-### 1️⃣ Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/goal-decomposer-agent.git
 cd goal-decomposer-agent
 ```
 
-### 2️⃣ Create a Virtual Environment
+### Create a Virtual Environment
 
 ```bash
 python -m venv venv
@@ -45,13 +45,13 @@ source venv/bin/activate      # macOS/Linux
 venv\Scripts\activate       # Windows
 ```
 
-### 3️⃣ Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Set up Environment Variables
+### Set up Environment Variables
 
 Create a `.env` file in the project root:
 
@@ -64,7 +64,7 @@ JUDGMENT_ORG_KEY=your_judgment_org_key
 
 ---
 
-## 🚀 Running the Program
+## Running the Program
 
 To launch the goal decomposer:
 
@@ -78,7 +78,7 @@ You’ll be asked to:
 - Enter your goal (e.g. "I want to become an AI Engineer")
 - Enter a timeframe (e.g. "6 months")
 
-### 🧠 Sample Output
+### Sample Output
 
 ```json
 [
@@ -101,7 +101,7 @@ You’ll be asked to:
 
 ---
 
-## 🧪 Evaluation Logic
+## Evaluation Logic
 
 After decomposition, the result is **scored for faithfulness** using:
 
@@ -145,7 +145,7 @@ You’ll see:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Want to improve this? PRs are welcome!
 
@@ -157,9 +157,9 @@ Want to improve this? PRs are welcome!
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
-Developed with 🤔 by [Aakash Reddy Nuthalapati](https://github.com/aakash-73)
+Developed with curiosity by [Aakash Reddy Nuthalapati](https://github.com/aakash-73)
 
 ---
 

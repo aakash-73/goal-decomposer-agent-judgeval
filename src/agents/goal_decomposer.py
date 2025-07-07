@@ -7,10 +7,8 @@ from judgeval import JudgmentClient
 from judgeval.data import Example
 from judgeval.scorers import FaithfulnessScorer
 
-# Load environment variables from .env file
 load_dotenv()
 
-# Retrieve API keys and org keys
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 JUDGMENT_API_KEY = os.getenv("JUDGMENT_API_KEY")
@@ -19,14 +17,11 @@ JUDGMENT_ORG_KEY = os.getenv("JUDGMENT_ORG_KEY")
 if not JUDGMENT_API_KEY:
     raise ValueError("JUDGMENT_API_KEY is required for Judgeval tracing and evaluation.")
 
-# Optional project override
 PROJECT_NAME = os.getenv("JUDGMENT_PROJECT_NAME", "goal-decomposer-agent")
 
-# Initialize Groq and OpenAI clients
 groq_client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 openai_client = OpenAI(api_key=OPENAI_API_KEY) if OPENAI_API_KEY else None
 
-# Initialize Tracer with optional org key
 tracer_kwargs = {
     "api_key": JUDGMENT_API_KEY,
     "project_name": PROJECT_NAME
@@ -36,7 +31,6 @@ if JUDGMENT_ORG_KEY:
 
 judgment = Tracer(**tracer_kwargs)
 
-# Initialize JudgmentClient with optional org key
 eval_client = JudgmentClient()
 
 
